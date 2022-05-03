@@ -1,4 +1,5 @@
 let defaultColor = "black";
+let click = true;
 
 function boardSize(size) {
     let board = document.querySelector('.board');
@@ -26,10 +27,12 @@ function changeSize(input) {
 }
 
 function colorSquare() { 
-    if ((defaultColor === "random")) {
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    } else {
-    this.style.backgroundColor = defaultColor;
+    if(click) {
+        if ((defaultColor === "random")) {
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        } else {
+            this.style.backgroundColor = defaultColor;
+        }
     }
 }
 
@@ -42,3 +45,12 @@ function reset() {
     let squares = board.querySelectorAll('div');
     squares.forEach(div => div.style.backgroundColor ='white');
 }
+
+document.querySelector('body').addEventListener('click', (e) => {
+    click = !click;
+    if(click) {
+        document.querySelector('.mode').textContent = "You Are Currently Drawing"
+    } else {
+        document.querySelector('.mode').textContent = "You Are NOT Drawing"
+    }
+})
