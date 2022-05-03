@@ -13,20 +13,21 @@
     <body>
       <div class="container">
         <div class="title"><h1>Etch-A-Sketch</h1></div>
+        <div><h3> Choose the Size of The Board To Begin</h3></div>
+        <div>
+            <input type="text" placeholder="Choose Size of Board" onchange="changeSize(this.value)"/>
+            <button>Select Size</button>
+        </div>
+        <div class="buttons">
+            <button onclick="changeColor('black')">Black</button>
+            <button onclick="changeColor('grey')">Grey</button>
+            <button onclick="changeColor('random')">Random</button>
+            <button onclick="changeColor('white')">Erase</button>
+            <button onclick="reset()">Reset</button>
+        </div>
         <div class="mode">You Are Currently Drawing</div>
         <div class="content">
             <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('grey')">Grey</button>
-                <button onclick="changeColor('random')">Random</button>
-                <button onclick="changeColor('white')">Erase</button>
-                <button onclick="reset()">Reset</button>
-            </div>
-            <div>
-                <input type="text" placeholder="Choose Size of Board" onchange="changeSize(this.value)"/>
-                <button>Select Size</button>
-            </div>
         </div>
       </div>
     </body>

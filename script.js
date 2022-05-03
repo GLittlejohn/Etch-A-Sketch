@@ -47,10 +47,13 @@ function reset() {
 }
 
 document.querySelector('body').addEventListener('click', (e) => {
-    click = !click;
-    if(click) {
-        document.querySelector('.mode').textContent = "You Are Currently Drawing"
-    } else {
-        document.querySelector('.mode').textContent = "You Are NOT Drawing"
+    if(e.target.tagName != 'BUTTON') {
+        click = !click;
+        if(click) {
+            document.querySelector('.mode').textContent = "You Are Currently Drawing"
+        } else {
+            document.querySelector('.mode').textContent = "You Are NOT Drawing"
+    }   
     }
 })
+    
