@@ -2,7 +2,7 @@
     height: 500px;
     width: 500px;
     display: grid;
-    background-color: aqua;
+    background-color: white;
 }
 
 .container {
@@ -19,5 +19,15 @@ body {
 }
 
 .subtitle {
+    color: white;
+}
+
+.content {
+    border: 10px;
+    border-color: red;
+    border-style: double;
+}
+
+footer {
     color: white;
 }
